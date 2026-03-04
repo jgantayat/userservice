@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the SB-User-service application...
-      - mvn package -DskipTests
+      - mvn package
   post_build:
     commands:
       - echo Build the SB-User-service completed on `date`
