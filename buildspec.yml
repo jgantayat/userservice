@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the SB-User-service application...
+      - mvn package
+  post_build:
+    commands:
+      - echo Build the SB-User-service completed on `date`
+artifacts:
+    files:
+        - target/*.jar
+    discard-paths: yes
+cache:
+  paths:
+    - '/root/.m2/**/*'
